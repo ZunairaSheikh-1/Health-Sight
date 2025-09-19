@@ -68,32 +68,59 @@
 # acc1.withdraw(100)
 
 
-import time
+# import time
 
-# Palindrome Checker (Creative Coding)
+# # Palindrome Checker (Creative Coding)
+
+# # User input
+# text = input("Enter a word or number: ")
+
+# # Remove spaces + lowercase for fair comparison
+# clean_text = text.replace(" ", "").lower()
+
+# # Reverse the string
+# reversed_text = clean_text[::-1]
+
+# print("\n Checking if it's a palindrome...\n")
+# time.sleep(1)
+
+# # Print characters one by one (animation effect)
+# for c in reversed_text:
+#     print(c, end="", flush=True)
+#     time.sleep(0.1)
+# print("\n")
+
+# # Palindrome check
+# if clean_text == reversed_text:
+#     print(f"Wow! '{text}' is a Palindrome")
+# else:
+#     print(f"'{text}' is NOT a Palindrome.")
+
+
+
+# Word Frequency Counter Program
+
+def word_frequency(text):
+    # Text ko lowercase kar ke aur split karke words nikalna
+    words = text.lower().split()
+    
+    # Dictionary for storing frequencies
+    freq = {}
+    
+    for word in words:
+        # Agar word dictionary me hai to +1 karo warna 1 se start karo
+        freq[word] = freq.get(word, 0) + 1
+    
+    return freq
+
 
 # User input
-text = input("Enter a word or number: ")
+text = input("Enter some text: ")
 
-# Remove spaces + lowercase for fair comparison
-clean_text = text.replace(" ", "").lower()
+# Function call
+result = word_frequency(text)
 
-# Reverse the string
-reversed_text = clean_text[::-1]
-
-print("\n Checking if it's a palindrome...\n")
-time.sleep(1)
-
-# Print characters one by one (animation effect)
-for c in reversed_text:
-    print(c, end="", flush=True)
-    time.sleep(0.1)
-print("\n")
-
-# Palindrome check
-if clean_text == reversed_text:
-    print(f"Wow! '{text}' is a Palindrome")
-else:
-    print(f"'{text}' is NOT a Palindrome.")
-
-
+# Display result creatively
+print("\n Word Frequency Count")
+for word, count in result.items():
+    print(f"{word} : {count}")
