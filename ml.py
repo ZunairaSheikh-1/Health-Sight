@@ -30,15 +30,43 @@
 
 
 
-# Word Reverser 
+# # Word Reverser 
 
-print("Welcome to the Magical Word Reverser \n")
+# print("Welcome to the Magical Word Reverser \n")
 
-word = input("Enter any word: ")
+# word = input("Enter any word: ")
 
-reversed_word = word[::-1]
+# reversed_word = word[::-1]
 
-print("\n Casting a spell. reversing the letters")
-print("Original Word:", word)
-print("Reversed Word:", reversed_word)
-print("Ta-da! Your word has been flipped!")
+# print("\n Casting a spell. reversing the letters")
+# print("Original Word:", word)
+# print("Reversed Word:", reversed_word)
+# print("Ta-da! Your word has been flipped!")
+
+
+
+#Create a bank account app 
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited {amount}, new balance = {self.balance}")
+    
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrawn {amount}, balance left = {self.balance}")
+        else:
+            print("Insufficient Balance!")
+
+# Using the class
+acc1 = BankAccount("Zunaira", 500)
+acc1.deposit(200)
+acc1.withdraw(100)
+
+
+
+
