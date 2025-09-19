@@ -18,9 +18,27 @@
 # print("The magical sum is:", sum_result,)
 
 
-# Squares from 1 to 10 
+# # Squares from 1 to 10 
 
-print("Welcome to the Square Show! \n")
+# print("Welcome to the Square Show! \n")
 
-for i in range(1, 11):
-    print(f"{i} × {i} = {i*i}")
+# for i in range(1, 11):
+#     print(f"{i} × {i} = {i*i}")
+
+
+
+
+
+
+# Word Reverser 
+
+print("Welcome to the Magical Word Reverser \n")
+
+word = input("Enter any word: ")
+
+reversed_word = word[::-1]
+
+print("\n Casting a spell. reversing the letters")
+print("Original Word:", word)
+print("Reversed Word:", reversed_word)
+print("Ta-da! Your word has been flipped!")
